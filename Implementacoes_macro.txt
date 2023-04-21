@@ -1,0 +1,18 @@
+Clientes
+- Cadastro
+- Login
+- Solicitações de Serviço
+- Lista de Arquitetos
+- Atualização de Cadastro
+- Solicitações realizadas
+
+Arquitetos
+- Cadastro
+- Login
+- Serviços
+    - Aceitar
+    - Recusar
+    - Excluir
+    - Restaurar excluídos
+- Solicitações de Serviço
+- Atualização de Cadastro

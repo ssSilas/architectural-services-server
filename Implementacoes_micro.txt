@@ -1,0 +1,24 @@
+Clientes
+    Criar Tabela -> Id, Nome, E-mail, Telefone, Gênero, idade
+    Routes:
+        Criar cliente
+        Login
+
+
+Serviços
+    Criar Tabela -> id, descricao, clientefk, status, create_at
+    Routes:
+        Criar
+        Excluir
+        Editar
+        Listar
+    
+    
+Arquitetos
+    Criar Tabela -> Id, Nome, E-mail, Telefone, Gênero, idade
+    Routes:
+        Criar arquiteto
+        Login
+        Listar arquitetos
+        
+    
