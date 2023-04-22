@@ -1,12 +1,12 @@
 Clientes
-    Criar Tabela -> Id, Nome, E-mail, Telefone, Gênero, idade
+X   Criar Tabela e seus relacionamento -> Id, Nome, E-mail, Telefone, Gênero, idade
     Routes:
         Criar cliente
         Login
 
 
 Serviços
-    Criar Tabela -> id, descricao, clientefk, status, create_at
+X   Criar Tabela e seus relacionamento -> id, descricao, clientefk, arquitetofk, status, create_at
     Routes:
         Criar
         Excluir
@@ -15,10 +15,10 @@ Serviços
     
     
 Arquitetos
-    Criar Tabela -> Id, Nome, E-mail, Telefone, Gênero, idade
+X  Criar Tabela e seus relacionamento -> Id, Nome, E-mail, Telefone, Gênero, idade
     Routes:
         Criar arquiteto
         Login
         Listar arquitetos
-        
+
     
