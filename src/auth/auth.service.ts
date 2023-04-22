@@ -35,6 +35,7 @@ export class Tokengenerate {
       data: {
         id: user.id,
         email: user.email,
+        role: user.role,
       }
     }
     return this.jwtService.sign(objTokengenerate, { secret: secretKey, algorithm: 'HS256', })
@@ -107,9 +108,11 @@ export class AuthService {
       const passForCompare = this.createHashForPass(password)
       compare = passForCompare === user.password;
 
+      console.log(user instanceof ClienteEntity ? "cliente" : "arquiteto")
       const response: object = {
         id: user.id,
-        email: user.email
+        email: user.email,
+        role: user instanceof ClienteEntity ? "cliente" : "arquiteto"
       }
 
       if (!compare) return null

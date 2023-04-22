@@ -1,4 +1,4 @@
-import { BadRequestException, Inject, Injectable, UnauthorizedException } from '@nestjs/common';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ArquitetoEntity } from './arquiteto.entity';
 
 @Injectable()
@@ -8,10 +8,13 @@ export class ArquitetoService {
     private readonly arquitetoRepo: typeof ArquitetoEntity
   ) { }
 
+  async findAll(){
+    return await this.arquitetoRepo.findAll()
+  }
+  
   async findByEmail(email: string) {
     try {
       const user = await this.arquitetoRepo.findOne({
-        raw: true,
         attributes: ['id', 'email', 'password'],
         where: { email }
       });

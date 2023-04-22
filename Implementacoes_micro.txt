@@ -1,8 +1,8 @@
 Clientes
 X   Criar Tabela e seus relacionamento -> Id, Nome, E-mail, Telefone, Gênero, idade
-    Routes:
-        Criar cliente
-        Login(Role client)
+X    Routes:
+X        Criar cliente
+X        Login(Role client)
 
 
 Serviços
@@ -16,9 +16,9 @@ X   Criar Tabela e seus relacionamento -> id, descricao, clientefk, arquitetofk,
     
 Arquitetos
 X  Criar Tabela e seus relacionamento -> Id, Nome, E-mail, Telefone, Gênero, idade
-    Routes:
-        Criar arquiteto
-        Login(Role arquiteto)
-        Listar arquitetos
+X    Routes:
+X       Criar arquiteto
+X       Login(Role arquiteto)
+X       Listar arquitetos
 
     
