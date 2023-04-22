@@ -29,4 +29,5 @@ export class CreateUserDto {
 export class UserDataForTokenDto {
   id: number
   email: string
+  role:string
 }

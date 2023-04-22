@@ -11,7 +11,6 @@ export class ClienteService {
   async findByEmail(email: string) {
     try {
       const user = await this.clienteRepo.findOne({
-        raw: true,
         attributes: ['id', 'email', 'password'],
         where: { email }
       });
