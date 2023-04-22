@@ -3,10 +3,10 @@ import { ArquitetoService } from './arquiteto.service';
 
 @Controller('arquiteto')
 export class ArquitetoController {
-  constructor(private readonly arquitetoService: ArquitetoService) {}
+  constructor(private readonly arquitetoService: ArquitetoService) { }
 
   @Get()
-  async getAll(){
+  async getAll() {
     return await this.arquitetoService.findAll()
   }
 }

@@ -8,10 +8,10 @@ X        Login(Role client)
 Serviços
 X   Criar Tabela e seus relacionamento -> id, descricao, clientefk, arquitetofk, status, create_at
     Routes:
-        Criar
-        Excluir
-        Editar
-        Listar
+X       Criar
+X       Listar
+X       Editar
+X        Excluir
     
     
 Arquitetos
