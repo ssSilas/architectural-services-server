@@ -2,8 +2,8 @@ import { Column, DataType, HasMany, Model, Table } from "sequelize-typescript";
 import { ServicoEntity } from "src/servico/servico.entity";
 
 @Table({
-  tableName: "arquiteto",
-  modelName: 'arquiteto',
+  tableName: "cliente",
+  modelName: 'cliente',
   updatedAt: false
 })
 export class ClienteEntity extends Model {
@@ -26,6 +26,12 @@ export class ClienteEntity extends Model {
     type: DataType.STRING(150),
   })
   email: string
+
+  @Column({
+    allowNull: false,
+    type: DataType.STRING(),
+  })
+  password: string
 
   @Column({
     allowNull: true,

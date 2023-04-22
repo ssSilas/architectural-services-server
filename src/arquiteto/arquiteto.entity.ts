@@ -1,4 +1,5 @@
-import { Column, DataType, Model, Table } from "sequelize-typescript";
+import { Column, DataType, Model, Table, HasMany } from "sequelize-typescript";
+import { ServicoEntity } from "src/servico/servico.entity";
 
 @Table({
   tableName: "arquiteto",
@@ -27,6 +28,12 @@ export class ArquitetoEntity extends Model {
   email: string
 
   @Column({
+    allowNull: false,
+    type: DataType.STRING()
+  })
+  password: string
+
+  @Column({
     allowNull: true,
     type: DataType.STRING(15),
   })
@@ -43,4 +50,7 @@ export class ArquitetoEntity extends Model {
     type: DataType.INTEGER({ length: 3 }),
   })
   idade: number
-}
+
+  @HasMany(() => ServicoEntity)
+  servico: ServicoEntity
+} 

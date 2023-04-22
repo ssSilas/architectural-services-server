@@ -1,10 +1,10 @@
-import { Column, DataType, ForeignKey, HasMany, Model, Table } from "sequelize-typescript";
+import { Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
 import { ArquitetoEntity } from "src/arquiteto/arquiteto.entity";
 import { ClienteEntity } from "src/cliente/cliente.entity";
 
 @Table({
-  tableName: "arquiteto",
-  modelName: 'arquiteto',
+  tableName: "servico",
+  modelName: 'servico',
   updatedAt: false
 })
 export class ServicoEntity extends Model {
@@ -25,23 +25,20 @@ export class ServicoEntity extends Model {
   @ForeignKey(() => ClienteEntity)
   @Column({
     allowNull: false,
-    type: DataType.STRING(150),
+    type: DataType.INTEGER
   })
-  clientefk: string
+  clientefk: number
 
   @ForeignKey(() => ArquitetoEntity)
   @Column({
     allowNull: false,
-    type: DataType.STRING(150),
+    type: DataType.INTEGER,
   })
-  arquitetofk: string
+  arquitetofk: number
 
   @Column({
     allowNull: false,
     type: DataType.TINYINT,
   })
   status: number
-
-  @HasMany(() => ServicoEntity)
-  servico: ServicoEntity
 }
